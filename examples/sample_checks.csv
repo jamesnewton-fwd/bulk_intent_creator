@@ -1,0 +1,4 @@
+name,check_type,from_location_type,from_location_value,to_location_type,to_location_value,mode,flow_types,forwarding_types,from_ipv4_dst,to_ipv4_dst,bypass_devices,tags,note,priority,enabled,perf_monitoring_enabled,return_path
+Web to app reachability,Existential,HostFilter,10.0.0.10,HostFilter,10.1.0.20,PERMIT_ALL,VALID,L3,,,,web-checks,Verify web tier can reach app server,NOT_SET,true,false,ANY
+DNS reachability,Existential,NetworkFilter,10.0.0.0/24,HostFilter,10.2.0.53,PERMIT_ALL,VALID,,10.2.0.53,,,dns-checks,All hosts can reach internal DNS,NOT_SET,true,false,ANY
+Firewall bypass check,Existential,HostFilter,10.3.0.5,HostFilter,10.1.0.20,PERMIT_ALL,VALID,L3,,,nyc-dc01-fw01,security,Check path bypassing edge firewall,HIGH,true,false,ANY
